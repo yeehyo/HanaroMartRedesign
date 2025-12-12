@@ -1,0 +1,413 @@
+/* ========================================================================
+   0) 기본 색상 / 폰트 설정
+======================================================================== */
+:root {
+    --hagray1: #FAFAFA;
+    --hagray2: #E7EAE5;
+    --hagray3: #757B70;
+    --hagray4: #30372D;
+    --hablack: #111111;
+
+    --hagreen1: #3FBF5B;
+    --hagreen2: #1B5E28;
+    --hagreen3: #E8F5E9;
+
+    --hayellow1: #F4B942;
+    --hayellow2: #AA6039;
+    --hayellow3: #FFF9E6;
+
+    --font-sans: "Noto Sans KR", sans-serif;
+    --font-serif: "Noto Serif KR", serif;
+}
+
+
+/*전체 폰트 들어갈거 지정해준 거*/
+
+h1 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 5rem;        /* 96 -> 80px 수정*/
+  font-style: normal;
+  font-weight: 700;
+  line-height: 6rem;      /* 96px */
+}
+
+
+h2 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 3.5rem;      /* 56px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4.5rem;    /* 72px */
+}
+
+
+h3 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 2rem;        /* 32px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;      /* 32px */
+}
+
+
+h4 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 1.5rem;        /* 24px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.875rem;    /* 30px */
+}
+
+
+h5 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 1.25rem;      /* 20px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;    /* 20px */
+}
+
+
+h6 {
+  color: var(--hablack);
+  font-family:var(--font-sans);
+  font-size: 1.125rem;     /* 18px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;     /* 그대로 */
+}
+
+
+
+.home-regular {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 1.5rem;          /* 32 -> 24px 수정 */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;        /* 32px */
+  letter-spacing: -0.06rem; /* -0.96px */
+}
+
+
+
+
+.origin-regular {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 1rem;          /* 16px */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;      /* 24px */
+  letter-spacing: -0.03rem; /* -0.48px */
+}
+
+
+
+.h7 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 1rem;          /* 16px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1rem;        /* 16px */
+  letter-spacing: -0.03rem; /* -0.48px */
+}
+
+
+.intro-regular {
+  color: var(--hablack);
+  font-family:var(--font-sans);
+  font-size: 1.2rem;        /* 24px / 1.5rem -> 1.2rem 으로 수정*/
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.25rem;     /* 52px */
+  letter-spacing: -0.045rem; /* -0.72px */
+}
+
+.some-class {
+  color: var(--hablack);
+  font-family: var(--font-serif);
+  font-size: 3.5rem;       /* 56px */
+  font-style: normal;
+  font-weight: 500;
+  line-height: 4.375rem;   /* 70px */
+}
+
+body{background-color: var(--hagray1);
+overflow-x: clip;}
+
+
+/*전역 바디 섹션 무력화*/
+.full-bleed {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+}
+
+
+
+/* --------------------------------------------------------
+    기본 wrapper — 전체 페이지 기준 동일하게 맞춰야 함 
+--------------------------------------------------------- */
+.wrapper {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 40px);
+    box-sizing: border-box;     
+}
+
+/* --------------------------------------------------------
+    헤더 기본 스타일 
+--------------------------------------------------------- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(0px); /* blur 제거 */
+    background-color: rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid var(--hagreen2);
+
+    
+    padding: 2.3rem 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 스크롤 후 색상 전환 */
+header.light,
+header.scrolled {
+    background-color: var(--hagray1);
+}
+
+
+/* 위에 해더는 전체 공간을 할당한거라면 여기는 네비게이션 크기 등 조정하기 위한 부분)*/
+.header-inner {
+    max-width: 960px;    
+    width: 100%;
+    margin: 0 auto;
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --------------------------------------------------------
+   네비게이션 파트
+--------------------------------------------------------- */
+
+
+.main-nav {
+    display: flex;
+    list-style: none;
+    gap: clamp(20px, 5vw, 100px); 
+    width: auto;
+}
+
+.main-nav li h5 {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.main-nav li h5 a{
+  padding: 8px 0;
+}
+
+.main-nav li h5:hover{
+  color: var(--hagreen2);
+}
+
+/*life 페이지 헤더*/
+
+.lifepage .main-nav li h5 a{
+  padding: 8px 0;
+  color: var(--hagray3);
+}
+.lifepage .main-nav li h5 a:hover{
+  color: var(--hagreen2);
+}
+.lifepage .main-nav li h5 a.active{
+  color: var(--hagreen2);
+  border-bottom: var(--hagreen2) solid 2px;
+}
+
+/*info 페이지 헤더*/
+.infopage .main-nav li h5 a{
+  padding: 8px 0;
+  color: var(--hagray3);
+}
+.infopage .main-nav li h5 a:hover{
+  color: var(--hagreen2);
+}
+.infopage .main-nav li h5 a.active{
+  color: var(--hagreen2);
+  border-bottom: var(--hagreen2) solid 2px;
+}
+
+/*--------------------------------------------------------------
+미디어 쿼리
+--------------------------------------------------------------*/
+
+@media (max-width: 960px) {
+    .log img {
+        width: 140px; /* 로고 줄이기 */
+    }
+    .main-nav h5 {
+        font-size: 1rem; /* 글자 줄이기 */
+    }
+    .main-nav {
+        gap: 40px;  /* 메뉴 간격 줄이기 */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .log img {
+        width: 110px;
+    }
+    .main-nav h5 {
+        font-size: 0.9rem;
+    }
+    .main-nav {
+        gap: 20px;
+    }
+}
+
+
+
+/*========================================
+푸터 푸터 푸터 푸터 푸터 푸터
+========================================*/
+footer {
+    width: 100vw; /* 전체 화면을 꽉 채우게 */
+    position: relative;
+    left: 50%;
+    margin-left: -50vw; /* wrapper 영향 제거 */
+    background-color: var(--hablack);
+    padding: 0;
+}
+
+/* 첫 번째 줄 */
+.special {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--hablack);
+    padding: 2rem 15rem;
+
+    border-bottom: var(--hagray3) 1px solid;
+}
+
+.special ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.special ul li a {
+    color: var(--hagray1);
+    text-decoration: none;
+}
+
+.special > ul > li > a.green{
+  color: var(--hagreen1);
+}
+
+/* 두 번째 줄 */
+footer .family {
+    width: 100%;
+    display: flex;
+    
+    align-items: flex-start;
+    flex-direction: row;
+    column-gap: 62px;
+
+    background-color: var(--hablack);
+    padding: 2rem 15rem;
+}
+
+
+
+
+footer .family .origin-regular {
+    color: var(--hagray1); 
+}
+footer .family .origin-regular:nth-child(2){
+  padding-top: 1rem;
+}
+
+.move {
+    width: 8rem;
+    height: 2rem;
+    border-radius: 2rem;
+    background-color: var(--hagray1);
+    font-size: 0.8rem !important;
+    font-family: var(--font-sans) !important;
+    font-weight: 600 !important;
+}
+
+.move:hover{
+    width: 8rem;
+    height: 2rem;
+    border-radius: 2rem;
+    background-color: var(--hagreen1);
+    font-size: 0.8rem !important;
+    font-family: var(--font-sans) !important;
+    font-weight: 600 !important;
+}
+
+
+@media (max-width: 768px) {
+
+    .special {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem;
+        margin-top: 1rem;
+    }
+
+    .special ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .move {
+        width: 100%;
+        height: 2.5rem;
+        border-radius: 1.2rem;
+        font-size: 1rem !important;
+        font-family: var(--font-sans) !important;
+        font-weight: 700 !important;
+}
+
+.move:hover{
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 1.2rem;
+  font-size: 1rem !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 700 !important;
+  background-color: var(--hagreen1);
+}
+
+  
+
+    footer .family {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+  }
+

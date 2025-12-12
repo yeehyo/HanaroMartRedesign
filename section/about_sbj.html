@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <style>
+        body {
+            margin: 0 auto;
+            padding: 10% 0;
+        }
+
+        .partner {
+            margin: 3vh 0;
+            text-align: center
+        }
+
+        .btn_top {
+            color: var(--hablack);
+            font-family: var(--font-sans);
+            font-size: 1.125rem;
+            /* 18px */
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        h2 {
+            color: #1B5E28;
+            font-family: var(--font-sans);
+            font-size: 3.5rem;
+            /* 56px */
+            font-style: normal;
+            font-weight: 700;
+            line-height: 4.5rem;
+            /* 72px */
+        }
+
+        p {
+            margin: 3vh auto;
+        }
+
+        h3 {
+            color: var(--hablack);
+            font-family: var(--font-sans);
+            font-size: 2rem;
+            /* 32px */
+            font-style: normal;
+            font-weight: 700;
+            line-height: 2rem;
+            /* 32px */
+            margin-bottom: 5rem;
+            text-align: center
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            margin : 0 1.5rem;
+        }
+
+        .process{
+            margin: 15rem 0;
+        }
+        /* 전체 컨테이너 설정 */
+        .process-flow {
+            display: flex;
+            /* Flexbox로 가로 정렬 */
+            justify-content: center;
+            /* 가운데 정렬 (선택 사항) */
+            align-items: flex-start;
+            /* 상단 정렬 */
+            padding: 1rem 20px;
+            font-family: Arial, sans-serif;
+
+        }
+
+        /* 각 단계 항목 설정 */
+        .step-item {
+            display: flex;
+            flex-direction: column;
+            /* 원, 시간, 화살표를 수직으로 배치 */
+            align-items: center;
+            position: relative;
+            /* 화살표 위치를 위한 기준점 */
+            text-align: center;
+        }
+
+        /* 단계 원 (가장 중요한 부분) *//*여기는 반응형 머르겠음*/
+        .step-circle {
+            /* 원 크기 지정 (조절 가능) */
+            width: 20rem;
+            height: 20rem;
+
+            /* 원 모양 생성 */
+            border: 2px solid #1B5E28;
+            /* 이미지의 녹색 테두리 */
+            border-radius: 50%;
+
+            /* 내용물 수직 중앙 정렬 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 1rem;
+            box-sizing: border-box;
+            /* 패딩이 크기에 포함되도록 함 */
+        }
+
+        /* 번호 스타일 */
+        .step-number {
+            color: var(--hablack);
+            font-family: var(--font-sans);
+            font-size: 1.5rem;
+            /* 24px */
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.875rem;
+        }
+
+        /* 제목 스타일 */
+        .step-title {
+            color: var(--hablack);
+            font-family: var(--font-sans);
+            font-size: 2rem;
+            /* 32px */
+            font-style: normal;
+            font-weight: 700;
+            line-height: 2rem;
+        }
+
+        /* 소요 시간 스타일 */
+        .step-time {
+            color: var(--hablack);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            /* 16px */
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1rem;
+            /* 16px */
+            letter-spacing: -0.03rem;
+        }
+
+        /* 단계 연결 화살표 */
+        .arrow {
+            position: absolute;
+            /* 원의 오른쪽 가운데에 배치 */
+            right: .5rem;
+            /* 화살표를 원 바깥으로 빼는 거리 */
+            top: 9rem;
+            /* 원의 중앙을 맞추기 위해 (원 높이 150px의 약 1/3 지점) */
+
+            font-size: 30px;
+            color: #1B5E28;
+            font-weight: bold;
+            /* 화살표 텍스트 자체를 회전시켜 방향을 맞춤 (선택 사항) */
+            /* transform: rotate(180deg); */
+
+            /* 텍스트 내용물이 원과 겹치지 않게 하기 위해 */
+            z-index: 10;
+        }
+
+        /* 마지막 단계는 화살표를 표시하지 않음 */
+        .last-step .arrow {
+            display: none;
+        }
+
+        /* 단계 간 간격 조정 (화살표 너비를 고려) */
+        .step-item:not(.last-step) {
+            margin-right: -3rem;
+            /* 화살표 너비에 맞게 조정 */
+        }
+
+        /*입점 혜택 구간*/
+        .benefit {
+            width: 80vw;
+            margin: 10vh auto;
+            align-content: center;
+        }
+
+        .benefit_big {
+            width: 100%;
+            display: flex;
+            justify-content: fl;
+            flex-direction: rown;
+        }
+
+        .benefit_img {
+            width: 50%;
+        }
+
+        .benefit_img img {
+            width: 35vw;
+            min-width: 500px;
+            margin-bottom: 5rem
+        }
+        .benefit_box{
+            width: 50%;
+            height: 100%;
+            min-height: 500px;
+        }
+        .benefit_box ul {
+            height: 55%;
+            margin-bottom: 10%;
+        }
+
+        .benefit_box li {
+            color: var(--hablack);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            /* 16px */
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.5rem;
+            /* 24px */
+            letter-spacing: -0.03rem;
+            padding: 3%;
+        }
+
+        .benefit_box li:first-child {
+            color: var(--hablack);
+            font-family: var(--font-sans);
+            font-size: 1.5rem;
+            /* 24px */
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.875rem;
+        }
+
+        /*버튼 구간*/
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: .1rem;
+            color: #fff;
+        }
+
+
+        .btn {
+            color: var(--HANARO-gray-5, #fff);
+            font-family: "Noto Sans";
+            font-size: 1.125rem;
+            /* 18px */
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            background-color: #30372D;
+            border-radius: 50px;
+            padding: 1rem 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="partner">
+        <h2>함께 성장하는 파트너</h2>
+
+        <p>하나로마트는 단순히 농산물을 사고파는 관계가 아닌, 농민과 함께 성장하는 진정한 파트너입니다.<br>
+            정성껏 키운 여러분의 농산물이 전국 소비자의 건강한 식탁으로 이어질 수 있도록 하나로마트가 함께하겠습니다.</p>
+        <div class="button-top">
+            <a href="#" class="btn_top">입점 문의하기 →</a>
+            <a href="#" class="btn_top">온라인 신청서 작성 →</a>
+        </div>
+    </section>
+    <section class="process">
+        <h3>생산자 입점 절차</h3>
+        <div class="process-flow">
+            <div class="step-item">
+                <div class="step-circle">
+                    <span class="step-number">1</span>
+                    <p class="step-title">입점 문의</p>
+                    <p class="step-time">2일</p>
+                </div>
+
+                <span class="arrow">→</span> <!--이미지로 바꿔야 할듯-->
+            </div>
+
+            <div class="step-item">
+                <div class="step-circle">
+                    <span class="step-number">2</span>
+                    <p class="step-title">상담·방문</p>
+                    <p class="step-time">1주</p>
+                </div>
+
+                <span class="arrow">→</span>
+            </div>
+
+            <div class="step-item">
+                <div class="step-circle">
+                    <span class="step-number">3</span>
+                    <p class="step-title">계약 체결</p>
+                    <p class="step-time">3일</p>
+                </div>
+
+                <span class="arrow">→</span>
+            </div>
+
+            <div class="step-item">
+                <div class="step-circle">
+                    <span class="step-number">4</span>
+                    <p class="step-title">상품 출하</p>
+                    <p class="step-time">즉시</p>
+                </div>
+
+                <span class="arrow">→</span>
+            </div>
+
+            <div class="step-item last-step">
+                <div class="step-circle">
+                    <span class="step-number">5</span>
+                    <p class="step-title">판매 정산</p>
+                    <p class="step-time">7-10일</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="benefit">
+        <h3>생산자 입점 혜택</h3>
+        <div class="benefit_big">
+            <div class="benefit_img">
+                <img src="./image/about/Frame 1430105741.png" alt="">
+                <img src="./image/about/Rectangle 16206.png" alt="">
+                <img src="./image/about/Rectangle 16207.png" alt="">
+            </div>
+            <div class="benefit_box">
+                <ul>
+                    <li>합리적 수익 구조</li>
+                    <li>도매시장 대비 20~30% 높은 수취가를 보장합니다.</li>
+                    <li>생산자와 소비자를 직접 연결해 중간 마진을 줄입니다.</li>
+                    <li>납품 후 7-10일 이내 빠른 대금 지급으로 안정적인 현금 흐름을 보장합니다.</li>
+                    <li>투명한 정산 시스템으로 판매 내력을 실시간 확인할 수 있습니다.</li>
+                </ul>
+                <ul>
+                    <li>전국 유통망</li>
+                    <li>전국 2,000개 매장 네트워크로 서울·경기부터 제주까지 안정적인 판로를 제공합니다.</li>
+                    <li>로컬푸드 직매장 738개소에서 지역 생산자를 우대합니다.</li>
+                    <li>오프라인 매장과 온라인몰 동시 입점으로 판매 범위를 확대할 수 있습니다.</li>
+                    <li>대형마트가 없는 농촌 지역까지 골고루 분포하여 연중 안정적인 판매 기회를 제공합니다.</li>
+                </ul>
+                <ul>
+                    <li>생산자 네트워크</li>
+                    <li>우수 농가 사례를 공유하고 서로 배울 수 있는 기회를 제공합니다.</li>
+                    <li>공동 마케팅 기회로 더 큰 시장에 진출할 수 있습니다.</li>
+                    <li>농협 금융 서비스 연계로 저리 대출 등의 혜택을 받을 수 있습니다.</li>
+                    <li>농자재 구매 할인, 농협 공판장 연계 등 농협 생태계의 다양한 혜택을 누릴 수 있습니다.</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+    <section class="button-group">
+        <a href="#" class="btn">생산자 입점문의</a>
+        <a href="#" class="btn">온라인 신청서 작성</a>
+    </section>
+</body>
+
+</html>

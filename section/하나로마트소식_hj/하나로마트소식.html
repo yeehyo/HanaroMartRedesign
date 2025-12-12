@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=deviceWidth, initial-scale=1.0" />
+    <title>하나로마트소식</title>
+    <!--reset css / destyle.css 썼쓰ㅃ니따-->
+    <link rel="stylesheet" href="./reset.css" />
+    <!--notosans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+    <style>
+      /*컬러스타일*/
+      :root {
+        --hagray1: #fafafa;
+        --hagray2: #e7eae5;
+        --hagray3: #757b70;
+        --hagray4: #30372d;
+        --hablack: #111111;
+
+        --hagreen1: #3fbf5b;
+        --hagreen2: #1b5e28;
+        --hagreen3: #e8f5e9;
+
+        --hayellow1: #f4b942;
+        --hayellow2: #aa6039;
+        --hayellow3: #fff9e6;
+      }
+      /*텍스트스타일*/
+      h3 {
+        color: var(--HANARO-gray-5, #111);
+        font-family: "Noto Sans";
+        font-size: 2rem; /* 32px */
+        font-style: normal;
+        font-weight: 700;
+        line-height: 2rem; /* 32px */
+      }
+      h4 {
+        color: var(--HANARO-gray-5, #111);
+        font-family: "Noto Sans";
+        font-size: 1.5rem; /* 24px */
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.875rem; /* 30px */
+      }
+      h6 {
+        color: var(--HANARO-gray-5, #111);
+        font-family: "Noto Sans";
+        font-size: 1.125rem; /* 18px */
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal; /* 그대로 */
+      }
+      p.origin-regular {
+        color: var(--HANARO-gray-5, #111);
+        font-family: "Noto Sans";
+        font-size: 1rem; /* 16px */
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem; /* 24px */
+        letter-spacing: -0.03rem; /* -0.48px */
+      }
+      /*배경컬러*/
+      body {
+        background-color: var(--hagray1);
+      }
+      /*가운데정렬*/
+      .wrap {
+        max-width: 1440px;
+        margin: 0 auto;
+      }
+
+      /*타이틀 디자인*/
+      .title {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 69px;
+      }
+      .title h6{
+        color: var(--hagreen2);
+      }
+
+      /*카드 모음*/
+      .cardWrap {
+        display: flex;
+        gap: 24px;
+        padding-bottom: 38px;
+        overflow-x: auto;
+      }
+
+      /*카드 디자인*/
+      .cardWrap .card {
+        min-width: 400px;
+        flex-basis: 1;
+      }
+      .cardWrap .card img {
+        width: 100%;
+      }
+      .cardWrap .card h6 { /* 카테고리 */
+        margin: 16px auto 12px 0;
+        color: var(--hagreen2);
+      }
+      .cardWrap .card h4 { /* 제목 */
+        margin-bottom: 4px;
+      }
+      .cardWrap .card .origin-regular{
+        color: var(--hagray3);
+      }
+
+      /*스크롤바 디자인*/
+      .cardWrap::-webkit-scrollbar {
+        height: 10px;
+      }
+      .cardWrap::-webkit-scrollbar-track {
+        background: var(--hagray2);
+        border-radius: 5px;
+      }
+      .cardWrap::-webkit-scrollbar-thumb {
+        background: var(--hayellow1);
+        border-radius: 5px;
+      }
+      .cardWrap::-webkit-scrollbar-thumb:hover {
+        background: var(--hayellow2)
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="title">
+        <h3>하나로마트 소식</h3>
+        <h6><a href="#">더 많은 소식 보기 →</a></h6>
+      </div>
+      <!--카드 나열------------------------------------------------------------------>
+      <div class="cardWrap">
+        <!--카드1---------------------------------------->
+        <div class="card">
+          <img src="./img/card1.png" alt="card1" />
+          <h6>이벤트/행사</h6>
+          <h4>겨울 김장 대축제! 최대 40% 할인</h4>
+          <p class="origin-regular">작성일 2025.11.10</p>
+          <p class="origin-regular">조회 1,247</p>
+        </div>
+        <!--카드2---------------------------------------->
+        <div class="card">
+          <img src="./img/card2.png" alt="card2" />
+          <h6>제철 농산물</h6>
+          <h4>11월의 보물, 달콤한 제주 한라봉 첫 출하</h4>
+          <p class="origin-regular">작성일 2025.11.08</p>
+          <p class="origin-regular">조회 2,156</p>
+        </div>
+        <!--카드3---------------------------------------->
+        <div class="card">
+          <img src="./img/card3.png" alt="card3" />
+          <h6>레시피</h6>
+          <h4>5분 완성! 하나로마트 한우로 만드는 소고기 장조림</h4>
+          <p class="origin-regular">작성일 2025.11.05</p>
+          <p class="origin-regular">조회 3,892</p>
+        </div>
+        <!--카드4---------------------------------------->
+        <div class="card">
+          <img src="./img/card4.png" alt="card4" />
+          <h6>이벤트/행사</h6>
+          <h4>씽씽몰 앱 설치하면 5천원 즉시 할인!</h4>
+          <p class="origin-regular">작성일 2025.11.12</p>
+          <p class="origin-regular">조회 4,521</p>
+        </div>
+        <!--카드5---------------------------------------->
+        <div class="card">
+          <img src="./img/card5.png" alt="card5" />
+          <h6>공지사항</h6>
+          <h4>양재 플래그십 스토어 리뉴얼 오픈!</h4>
+          <p class="origin-regular">작성일 2025.11.01</p>
+          <p class="origin-regular">조회 1,876</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

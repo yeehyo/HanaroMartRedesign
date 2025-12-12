@@ -1,0 +1,450 @@
+:root {
+            --hagray1: #FAFAFA;
+            --hagray2: #E7EAE5;
+            --hagray3: #757B70;
+            --hagray4: #30372D;
+            --hablack: #111111;
+
+            --hagreen1: #3FBF5B;
+            --hagreen2: #1B5E28;
+            --hagreen3: #E8F5E9;
+
+            --hayellow1: #F4B942;
+            --hayellow2: #AA6039;
+            --hayellow3: #FFF9E6;
+
+            --font-sans: "Noto Sans KR", sans-serif;
+            --font-serif: "Noto Serif KR", serif;}
+
+
+
+
+
+/*전체 폰트 들어갈거 지정해준 거*/
+
+h1 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 5rem;        /* 96 -> 80px 수정*/
+  font-style: normal;
+  font-weight: 700;
+  line-height: 6rem;      /* 96px */
+}
+
+
+h2 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 3.5rem;      /* 56px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4.5rem;    /* 72px */
+}
+
+
+h3 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 2rem;        /* 32px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;      /* 32px */
+}
+
+
+h4 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 1.5rem;        /* 24px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.875rem;    /* 30px */
+}
+
+
+h5 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 1.25rem;      /* 20px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;    /* 20px */
+}
+
+
+h6 {
+  color: var(--hablack);
+  font-family:var(--font-sans);
+  font-size: 1.125rem;     /* 18px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;     /* 그대로 */
+}
+
+
+
+.home-regular {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 1.5rem;          /* 32 -> 24px 수정 */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;        /* 32px */
+  letter-spacing: -0.06rem; /* -0.96px */
+}
+
+
+
+
+.origin-regular {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 1rem;          /* 16px */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;      /* 24px */
+  letter-spacing: -0.03rem; /* -0.48px */
+}
+
+
+
+.h7 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 1rem;          /* 16px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1rem;        /* 16px */
+  letter-spacing: -0.03rem; /* -0.48px */
+}
+
+
+.intro-regular {
+  color: var(--hablack);
+  font-family:var(--font-sans);
+  font-size: 1.2rem;        /* 24px / 1.5rem -> 1.2rem 으로 수정*/
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.25rem;     /* 52px */
+  letter-spacing: -0.045rem; /* -0.72px */
+}
+
+.some-class {
+  color: var(--hablack);
+  font-family: var(--font-serif);
+  font-size: 3.5rem;       /* 56px */
+  font-style: normal;
+  font-weight: 500;
+  line-height: 4.375rem;   /* 70px */
+}
+
+/*-------------------------------------------------------------------
+여기서부터 스타트
+-------------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    color: var(--hablack);
+    background-color: var(--hagray1);
+    padding-top: 188px;
+}
+
+body.lifepage header { background:var(--hagray1); }
+body.lifepage header a { color:#000; }
+
+
+
+/*본문*/
+#container {
+    max-width: 1440px;
+    margin: 50px auto;
+    padding: 0 80px;
+}
+
+
+.page-title {
+    text-align: left;
+}
+
+.page-title > h2 {
+    color: var(--hagreen2);
+    margin: 0 0 13px 0;
+}
+
+.page-title>p {
+    color: var(--hagray3);
+    margin-bottom: 58px;
+    display: flex;
+    white-space: nowrap;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 104px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chips {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.chips .chip:first-child{
+    background-color: var(--hablack);
+    color: var(--hagray1);
+    font-weight: 600;
+}
+
+.chip {
+    background-color: #FFFEFD;
+    padding: 13px 24px;
+    border-radius: 800px;
+    border: 1px solid var(--hagray3);
+}
+
+.chip:hover {
+    background-color: var(--hablack);
+    color: var(--hagray1);
+    font-weight: 600;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: #fff;
+    border: 1px solid var(--hagray3);
+    border-radius: 40px;
+    padding: 13px 24px;
+    width: 100%;
+    max-width: 360px;
+    position: relative;
+}
+
+.search-select {
+    color: var(--hablack);
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 10px;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+}
+
+.search-select::after {
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid var(--hablack);
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--hablack);
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.search-input::placeholder {
+    color: #777;
+}
+
+/*검색버튼*/
+.search-btn {
+    width: 43px;
+    height: 43px;
+    background: var(--hablack);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+}
+
+.search-icon {
+    width: 12px;
+    height: 12px;
+    border: 2.5px solid white;
+    border-radius: 50%;
+    position: relative;
+    right: 1px;
+    bottom: 1px;
+}
+
+.search-icon::after {
+    content: "";
+    width: 8px;
+    height: 2.5px;
+    border-radius: 10px;
+    background: #fff;
+    position: absolute;
+    right: -7px;
+    bottom: -3px;
+    transform: rotate(40deg);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    max-width: 400px;
+    width: 100%;
+    height: 520px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--hagreen3);
+    cursor: pointer;
+}
+
+.card-img {
+    width: 100%;
+    height: 55%;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+            transform: scale(1);
+}
+
+.card:hover {
+    background-color: var(--hayellow1);
+    box-shadow: 0 18px 30px rgba(10, 30, 18, 0.12);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover .card-img img {
+            transform: scale(1.1);
+        }
+
+.card-content {
+    padding: 30px 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    color: var(--hablack);
+}
+
+.card > .card-content h6 {
+    color: var(--hagreen2);
+    font-weight: 700;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 800;
+    margin-top: 8px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.decs {
+    margin-top: 8px;
+    color: var(--hagray3);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.date {
+    margin-top: 16px;
+    color: var(--hagray3);
+}
+/*숨겨진 카드 부분*/
+.hidden {
+    display: none;
+}
+
+.more-wrap {
+    text-align: center;
+    margin: 131px auto 107px auto;
+}
+
+.load-more {
+    padding: 18.5px 580px;
+    background-color: var(--hagray2);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.load-more:hover {
+    background-color: var(--hagreen2);
+    color: #fff;
+}
+/*버튼 반응형*/
+@media (max-width: 1440px){
+    .more-wrap{
+        display: flex;
+        justify-content: center;
+    }
+    .load-more{
+        width: 100%;
+        max-width: 1200px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+@media (max-width:1024px){
+    .load-more{
+        max-width: 800px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px){
+    .load-more{
+        max-width: 600px;
+        font-size: 15px;
+    }
+}
+@media (max-width: 500px){
+    .load-more{
+        max-width: 90%;
+        font-size: 14px;
+        padding: 12px 10px;
+    }
+}

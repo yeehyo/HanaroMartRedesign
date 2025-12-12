@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hero-section {
+            position: absolute;
+            top: 50%; left: 10%; right: 50%; bottom: 0;
+            width: 45vw;
+            min-width: 500px;
+            max-width: 40%;
+            height: 30vh;
+            background-color: rgb(159, 187, 238);
+            display: flex;
+            align-items: center;
+        }
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+        .hero-content h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .hero-content p {
+            font-size: 1rem;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        /* 버튼 스타일 */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+            border: 1px solid rgba(0, 0, 0, 0.7);
+            font-size: 0.7rem;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>진심을 판다, 안심을 산다!</h2>
+            <p>농민과 소비자를 하나로 연결하는 믿을 수 있는 우리 농산물</p>
+            <div class="button-group">
+                <a href="#" class="btn">농협몰 바로가기</a>
+                <a href="#" class="btn">가까운 매장 찾기</a>
+                <a href="#" class="btn">생산자 창립문의</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

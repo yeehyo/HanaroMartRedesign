@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
+    
+    <style>
+        /*디자인 시스템 가이드*/  
+    :root{
+     --hagray1:#FAFAFA;
+     --hagray2:#E7EAE5;
+     --hagray3:#757B70;
+     --hagray4:#30372D; 
+     --hablack:#111111;
+
+     --hagreen1:#3FBF5B;
+     --hagreen2:#1B5E28;
+     --hagreen3:#E8F5E9;
+
+     --hayellow1:#F4B942;
+     --hayellow2:#AA6039;
+     --hayellow3:#FFF9E6;
+
+     --font-sans: "Noto Sans KR", sans-serif;
+     --font-serif: "Noto Serif KR", serif;
+     }
+
+        footer{
+            margin: 0 auto;
+           
+        }
+        .wrapper{
+            width: 100vw;
+            margin: 0 auto;
+        }
+        .special{
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            background-color:var(--hablack);
+            font-family: var(--font-sans);
+            font-size: 1.125rem; 
+            font-style: normal ;
+            font-weight: 700;
+            line-height: normal; 
+            padding: 5rem;
+           
+        }
+        .special ul{
+            padding: 0;
+            display: flex;
+            justify-content:left;
+            list-style-type: none;
+            gap:1rem;
+            
+            }
+        .special a{
+            text-decoration: none;
+            color:var(--hagray1);
+        }
+        .family{
+            display: flex;
+            justify-content: left;
+            background-color:var(--hablack);
+            padding-top: 1rem;
+            gap:10rem;
+        }
+        .family .address{
+
+            color:var(--hagray1);
+            font-family: var(--font-sans); 
+            font-size: 1.125rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            width:20rem;
+        } 
+        .family .flogo{
+            width: 20rem;
+            padding-left: 10rem;
+           
+        }    
+        .move{
+            width: 8rem;
+            height: 2rem;
+            border-radius: 2rem;
+        } 
+
+    </style>
+</head>
+ 
+<body>
+    <footer>
+        <div class="wrapper">
+        <div class="special">
+            <ul>
+                <li><a href="#">개인정보 처리 방침</a></li>
+                <li><a href="#">이메일 무단 수집 거부</a></li>
+                <li><a href="#">이용약관 사이트 맵</a></li>         
+            </ul> 
+            <button class="move">패밀리사이트 이동</button>
+        </div>
+        <div class="family">
+            <div class="flogo">
+                <img src="./Layer_1.png">
+            </div>
+            <div class="address">
+                <P>서울 특별시 마포구 신촌로 66,7층 (노고산동,농협복합건물)농협하나로마트</p>
+                <p>대표이사: 박서홍 사업자 등록번호:825-85-02030 사업자정보확인</p>
+                <p>COPYRIGHT 농협경제지주 마트지원부, ALL Rights Reserved</p>
+            </div>
+        </div>
+        </div>
+    </footer> 
+</body>
+</html>          

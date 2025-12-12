@@ -1,0 +1,649 @@
+/* ========================================================================
+   0) 기본 색상 / 폰트 설정
+======================================================================== */
+:root {
+    --hagray1: #FAFAFA;
+    --hagray2: #E7EAE5;
+    --hagray3: #757B70;
+    --hagray4: #30372D;
+    --hablack: #111111;
+
+    --hagreen1: #3FBF5B;
+    --hagreen2: #1B5E28;
+    --hagreen3: #E8F5E9;
+
+    --hayellow1: #F4B942;
+    --hayellow2: #AA6039;
+    --hayellow3: #FFF9E6;
+
+    --font-sans: "Noto Sans KR", sans-serif;
+    --font-serif: "Noto Serif KR", serif;
+}
+
+
+/*전체 폰트 들어갈거 지정해준 거*/
+
+h1 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 5rem;        /* 96 -> 80px 수정*/
+  font-style: normal;
+  font-weight: 700;
+  line-height: 6rem;      /* 96px */
+}
+
+
+h2 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 3.5rem;      /* 56px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4.5rem;    /* 72px */
+}
+
+
+h3 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 2rem;        /* 32px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;      /* 32px */
+}
+
+
+h4 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 1.5rem;        /* 24px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.875rem;    /* 30px */
+}
+
+
+h5 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 1.25rem;      /* 20px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;    /* 20px */
+}
+
+
+h6 {
+  color: var(--hablack);
+  font-family:var(--font-sans);
+  font-size: 1.125rem;     /* 18px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;     /* 그대로 */
+}
+
+
+
+.home-regular {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 1.5rem;          /* 32 -> 24px 수정 */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;        /* 32px */
+  letter-spacing: -0.06rem; /* -0.96px */
+}
+
+
+
+
+.origin-regular {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 1rem;          /* 16px */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;      /* 24px */
+  letter-spacing: -0.03rem; /* -0.48px */
+}
+
+
+
+.h7 {
+  color: var(--hablack);
+  font-family: var(--font-sans);
+  font-size: 1rem;          /* 16px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1rem;        /* 16px */
+  letter-spacing: -0.03rem; /* -0.48px */
+}
+
+
+.intro-regular {
+  color: var(--hablack);
+  font-family:var(--font-sans);
+  font-size: 1.2rem;        /* 24px / 1.5rem -> 1.2rem 으로 수정*/ 
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.25rem;     /* 52px */
+  letter-spacing: -0.045rem; /* -0.72px */
+}
+
+.some-class {
+  color: var(--hablack);
+  font-family: var(--font-serif);
+  font-size: 3.5rem;       /* 56px */
+  font-style: normal;
+  font-weight: 500;
+  line-height: 4.375rem;   /* 70px */
+}
+
+/*==============================================
+ info 페이지 header 색상 고정 
+==================================================*/
+body.infopage header {
+    background: var(--hagray1);
+    
+}
+
+body.infopage header a {
+    color: var(--hablack);
+}
+
+
+
+/* ========================================================================
+   1) 회사소개 첫 섹션
+======================================================================== */
+
+.hanaro-info { width: 100%; }
+
+.hanaro-history {
+    background: linear-gradient(180deg, var(--hagreen3) 0%, var(--hagray1) 100%);
+    text-align: center;
+    padding: 203px 0 163px;
+    box-sizing: border-box;
+    transition: background-image 0.4s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+.subject {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subject h3 {
+    color: var(--hagreen2);
+    font-family: var(--font-serif);
+}
+
+.subject p {
+    font-size: 1.1rem;
+    color: var(--hagray3);
+    margin-bottom: 60px;
+}
+
+/* 원들이 들어있는 container */
+.container {
+    background-color: var(--hagray2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 270px;
+    padding: 211px 0 259px 0;
+    flex-wrap: wrap;
+    transition: background-image 0.4s ease;
+}
+
+/* 원(신선함, 상생, 진정성) */
+.circle {
+    width: 150px;
+    height: 150px;
+    background-color: var(--hagray4);
+    color: var(--hagray1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: -0.03rem;
+    transition: 0.3s ease;
+}
+
+.circle:hover {
+    color: var(--hagray4);
+    background-color: var(--hayellow1);
+}
+
+/* 모바일 : 1열 */
+@media (max-width: 768px) {
+    .hanaro-history .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+/* ========================================================================
+   2) 함께 성장하는 파트너
+======================================================================== */
+
+.partner {
+    text-align: center;
+}
+
+.partner h2 {
+    color: var(--hagreen2) !important;
+}
+
+
+
+.partner p {
+    padding-top: 24px;
+    color: var(--hagray4) !important;
+    box-sizing: border-box;
+}
+
+.button-top {
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.button-top a:hover{
+    color: var(--hagreen2);
+}
+
+.btn_top {
+    color: var(--hablack);
+    font-family: var(--font-sans);
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0 1.5rem;
+}
+
+/* ========================================================================
+   3) 입점 절차 (process-flow)
+======================================================================== */
+
+.process {
+    text-align: center;
+}
+
+.process > h3 {
+    margin: 210px 0 44px;
+    font-size: 2rem;
+    color: var(--hagreen2);
+}
+
+/* 프로세스 전체 박스 */
+.process-flow {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem 20px;
+}
+
+/* 각 항목 */
+.step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+/* 원 */
+.step-circle {
+    width: 20rem;
+    height: 20rem;
+    border: 1px solid var(--hagreen2);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 -20px;
+}
+
+.step-number {
+    height: 54px;
+    color: var(--hagreen2);
+}
+
+.step-title {
+    padding-bottom: 34px;
+    color: var(--hablack);
+}
+
+.step-time {
+    height: 43px;
+    color: var(--hagray3);
+    letter-spacing: -0.03rem;
+}
+
+/* 화살표 */
+.arrow {
+    position: absolute;
+    right: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.last-step .arrow {
+    display: none;
+}
+
+/* 생산자 입점 절차 — 모바일에서 세로 나열 */
+@media (max-width: 768px) {
+    .process-flow {
+        flex-direction: column;     
+        align-items: center;        
+        gap: 3rem;                  
+    }
+
+    .step-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;        /* 중앙으로 */
+        position: relative;
+    }
+
+    
+    .step-item .arrow {
+        display: none;
+    }
+
+    /* 원 사이 여백 증가 */
+    .step-circle {
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+/* ========================================================================
+   4) 입점 혜택 benefit =
+======================================================================== */
+
+.benefit {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 200px 0 100px 0;
+}
+
+.benefit-title {
+    text-align: center;
+    margin-bottom: 4rem; 
+    padding-left: 0;
+    margin-left: 0;
+    color:var(--hagreen2) !important;   
+}
+
+.benefit_row {
+    display: flex;
+    justify-content: flex-start;
+  
+    align-items: flex-start;
+    margin-bottom: 6rem;
+}
+
+.benefit_img img {
+    width: 40vw;
+    max-width: 576px;
+    border-radius: 12px;
+}
+
+.benefit_text {
+    padding-left: 66px;
+}
+
+.benefit_text p{
+    padding-top: 8px;
+    box-sizing: border-box;
+}
+
+.benefit_text h4 {
+    color: var(--hablack);
+    padding-bottom: 14px;
+}
+
+
+
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .benefit_row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .benefit_img img {
+        width: 100%;
+        max-width: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .benefit_text {
+        width: 100%;
+        text-align: left;
+        padding-top: 1.5rem;
+        padding-right: 20px;
+        padding-left: 20px;
+        white-space: normal !important;
+    }
+    .benefit-title {
+        text-align: left;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-bottom: 64px;
+    }
+
+}
+
+/* ========================================================================
+   5) 하단 버튼
+======================================================================== */
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-bottom: 20.875rem;
+}
+
+.btn {
+    color: #fff;
+    background-color: var(--hagray4);
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    font-family: var(--font-sans);
+}
+
+/*=====================================================
+히스토리 영역일세
+==========================================================*/
+
+.historypage {
+    width: 100%;
+    background: var(--hagray1);
+    padding: 170px 0 150px;
+}
+
+.history-main {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 상단 타이틀 */
+.historypage .top {
+    text-align: left;
+}
+
+.historypage .top h2 {
+    color: var(--hagreen2);
+    padding-bottom: 16px;
+}
+
+.historypage .top p {
+    color: var(--hagray3);
+    padding-bottom: 189px;
+}
+
+
+/* 2구조로 만들어야 함.------*/
+.history-block {
+    display: flex;                  
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+/* 왼쪽 (태동기 + 이미지) */
+.historypage .history {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.historypage .history > h3 {
+    color: var(--hagreen2);
+    padding-bottom: 53px;
+}
+
+/* 이미지 */
+.historypage .img_box img {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+}
+
+
+/* ===========================================================
+   오른쪽 timeline 영역
+===========================================================*/
+.historypage .time_line {
+    width: 70%;
+}
+
+.historypage .time_line h3 {
+    color: var(--hablack);
+    padding-bottom: 144px;
+}
+
+
+/* ===========================================================
+   timeline 내용 박스
+===========================================================*/
+
+
+.historypage .time_line_box ul {
+    display: flex;
+    flex-direction: column;
+    border-bottom: var(--hagray3) 1px solid;
+    margin-bottom: 70px;
+}
+
+/* 연도 */
+.historypage .time_line_box h4 {
+    padding-bottom: 40px;
+}
+
+/* 텍스트 */
+.historypage .time_line_box li {
+    padding-bottom: 40px;
+}
+.historypage .time_line_box li:last-child{
+    padding-bottom: 72px;
+}
+
+.historypage .history-block{
+    margin-top: 200px;
+}
+.historypage .history-block1{
+    margin-top: 0;
+}
+
+.historypage .history {
+    position: relative;
+    z-index: 2;
+}
+
+.historypage .time_line {
+    position: relative;
+    z-index: 1;
+}
+
+/* 이미지 크기 예쁘게 고정 */
+.historypage .img_box img {
+    width: 420px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ===========================================================
+   📱 모바일 반응형
+===========================================================*/
+@media (max-width: 768px) {
+
+    .history-block {
+        flex-direction: column;
+        align-items: center;   /* ← 중앙 배치 */
+        text-align: center;    /* ← 텍스트 중앙 */
+        gap: 3rem;
+    }
+
+    .historypage .history {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;   /* ← 타이틀/이미지 중앙 */
+        text-align: center;
+    }
+
+    
+
+    .historypage .time_line {
+        width: 100%;
+        height: auto;
+    }
+
+    .historypage .img_box img {
+    padding-left: 0 !important;
+        border-left: none !important;  /* 혹시 남아 있다면 강제 제거 */}
+}
+
+
+/* ===========================================================
+   히스토리 블록 기본 상태 (스크롤 전)
+===========================================================*/
+.historypage .history-block {
+    transform: translateY(120px);    /* 아래에서 올라오는 기본값 */
+    opacity: 0;                      /* 흐릿하게 시작 */
+    transition:
+        transform 0.75s cubic-bezier(0.16, 0.7, 0.4, 1.25),
+     opacity 0.75s ease-out;
+}
+
+
+/* ===========================================================
+ 활성화 상태 (스크롤로 중앙에 들어왔을 때)
+===========================================================*/
+.historypage .history-block.is-active {
+    transform: translateY(0px);      /* 제자리 */
+    opacity: 1;                      /* 선명하게 */
+}
+
+
