@@ -178,6 +178,7 @@ body.infopage header a {
 .subject h3 {
     color: var(--hagreen2);
     font-family: var(--font-serif);
+    font-family: -moz-var(--font-serif);
 }
 
 .subject p {
@@ -213,6 +214,7 @@ body.infopage header a {
     font-weight: 600;
     letter-spacing: -0.03rem;
     transition: 0.3s ease;
+    font-family: var(--font-sans);
 }
 
 .circle:hover {
@@ -561,6 +563,7 @@ body.infopage header a {
 /* 텍스트 */
 .historypage .time_line_box li {
     padding-bottom: 40px;
+
 }
 .historypage .time_line_box li:last-child{
     padding-bottom: 72px;
