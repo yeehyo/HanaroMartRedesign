@@ -1,7 +1,12 @@
 # HanaroMart_redesign
-하나로마트 리디자인 팀프로젝트입니다.
+하나로마트 리디자인 팀프로젝트입니다.<br>
+<a href="https://notefolio.net/hyojeong77/448920">팀 소개서 보러가기</a> l 
+<a href="https://notefolio.net/hyojeong77/448918">기획서 보러가기</a>
+
+
 
 <img src="./readme.png" alr="readme">
+
 
 ## 👥 팀원 소개
 
